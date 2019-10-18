@@ -21,21 +21,22 @@ module.exports = {
                     {text: 'Web', link: '/web/'}
                 ]
             },
-            {text: '关于我', link: '/about/'},
-            {text: 'Github', link: 'https://www.github.com/codeteenager'},
+            { text: '前端三剑客', items: [
+                { text: 'HTML', link: '/html/' },
+                { text: 'CSS', link: '/css/' },
+                { text: 'JavaScript', link: '/JavaScript/' },
+            ]},
+            {text: '关于我', link: '/About/'},
+            {text: 'Github', link: 'https://github.com/hanxinkuang/myBlog.git'},
         ],
-        sidebar: {
-            '/Home/': [
-                '/Home/', // Home文件夹的README.md 不是下拉框形式
-                {
-                    title: '侧边栏下拉框的标题1',
-                    children: [
-                        '/Home/Home', // 以docs为根目录来查找文件
-                        // 上面地址查找的是：docs>Home>Home.md 文件
-                        // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
-                    ]
-                }
-            ]
+        sidebar: 'auto',
+        smoothScroll: true // 页面滚动效果
+    },
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@imgUrl': '../img',
+            }
         }
     }
 };
