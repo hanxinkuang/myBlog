@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "postcss-loader": "^3.0.0"
+    "postcss-loader": "^7.0.2"
   }
 }
